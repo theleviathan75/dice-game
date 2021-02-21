@@ -27,10 +27,29 @@
       </section>
 
       <img src="starter/dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn2 btn--new">🔄 New game</button>
+      <button class="btn btn2 btn--roll">🎲 Roll dice</button>
+      <button class="btn btn2 btn--hold">📥 Hold</button>
+      <button class="btn btn--how">❓ How to play!</button>
     </main>
-    <script src="starter/script.js"></script>
+
+    <div class="modal hidden2">
+      <button class="close-modal">&times;</button>
+      <h1>🛑 How to play:</h1>
+      <br />
+      <p class="p1">
+        Two players go at it in a dice game. First person to get to 50 wins! Hit
+        the 'roll dice' button to start rolling. Points will accumulate in the
+        current section. Keep rolling to accumulate points, but DON'T roll a 1.
+        Your current score will reset if you do. If you've been lucky not
+        rolling a 1, you can hold those points to keep by pressing the 'hold'
+        button. First person to get to 50 wins! Good luck!! To play again, press
+        the new game button!
+      </p>
+    </div>
+    <div class="overlay hidden2"></div>
+
+    <script src="starter/sectionSeven.js"></script>
   </body>
 </html>
+

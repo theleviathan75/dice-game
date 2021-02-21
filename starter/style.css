@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -34,6 +34,11 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+}
+
+.p1 {
+  align-items: center;
+  padding: .5rem;
 }
 
 .player {
@@ -123,7 +128,7 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn::first-letter {
+.btn2::first-letter {
   font-size: 2.4rem;
   display: inline-block;
   margin-right: 0.7rem;
@@ -137,6 +142,10 @@ main {
 }
 .btn--hold {
   top: 46.1rem;
+}
+.btn--how {
+  top: 52.8rem;
+  transition: all 0.75s;
 }
 
 .btn:active {
@@ -158,7 +167,7 @@ main {
 }
 
 .player--winner {
-  background-color: #2f2f2f;
+  background-color: coral;
 }
 
 .player--winner .name {
@@ -168,4 +177,50 @@ main {
 
 .hidden {
   display: none;
+}
+
+.hidden2 {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  font-size: 1.5rem;
+  background-color: white;
+  transition: all 0.75s;
+  padding: 3rem 5rem;
+  border-radius: 15px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal:hover {
+  color: gray;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
 }

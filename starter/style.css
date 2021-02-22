@@ -209,7 +209,6 @@ main {
 
 .close-modal:hover {
   color: gray;
-  transition: all .3s;
 }
 
 .close-modal {

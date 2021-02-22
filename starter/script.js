@@ -101,28 +101,24 @@ btnHold.addEventListener("click", function () {
 
 btnNew.addEventListener("click", init);
 
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
+const modalBtn = document.querySelector(".btn--how");
+const modalOverlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
-const btnsOpenModal = document.querySelector(".btn--how");
 
-const openModal = function () {
-  modal.classList.remove("hidden2");
-  overlay.classList.remove("hidden2");
-};
+modalBtn.addEventListener("click", function () {
+  modalOverlay.classList.add("overlay-active");
+});
 
 const closeModal = function () {
-  modal.classList.add("hidden2");
-  overlay.classList.add("hidden2");
+  modalOverlay.classList.remove("overlay-active");
 };
 
-btnsOpenModal.addEventListener("click", openModal);
-btnCloseModal.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
+btnCloseModal.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', closeModal);
 
 document.addEventListener("keydown", function (e) {
   console.log(e.key);
-  if (e.key === "Escape" && !modal.classList.contains("hidden2")) {
+  if (e.key === "Escape" && modalOverlay.classList.contains("overlay-active")) {
     closeModal();
   }
 });
